@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible">
+    <title>New Entry</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a class="current" href="new.html">New Entry</a></li>
+                <li><a href="login.html">Log Out</a></li>
+                <li><a href="narrative.html">Narrative</a></li>
+                <li><a href="entrieslist.html">Entries List</a></li>
+
+            </ul>
+        </div>
+    </header>
+    <form>
+        <fieldset>
+            <legend><strong>Make a new Entry</strong></legend>
+            <h5>Enter current date:</h5>
+            <input type="date" name="date" required="required">
+            <br><br>
+            <h5>Enter the title of your Entry:</h5>
+            <input type="text" name="text" required="required">
+            <br><br>
+            <h5>Enter your entry here:</h5>
+            <textarea rows="4" cols="50" required="required"></textarea>
+            <br><br>
+            <input type="button" value="Save">
+        </fieldset>
+    </form>
+</body>
+
+</html>
