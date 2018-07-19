@@ -7,22 +7,19 @@
     <title>My Entries List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div>
-            <ul>
-                <li><a class="current" href="entrieslist.html">Entries List</a></li>
-                <li><a href="login.html">Log Out</a></li>
-                <li><a href="new.html">New Entry</a></li>
-                <li><a href="narrative.html">Narrative</a></li>
-
+            <ul class="topnav">
+                <li><a href="login.html"><i class="fa fa-sign-out">LOG OUT</i></a></li>
+                <li><a class="current" href="entrieslist.html">Entries List</a></li>                
             </ul>
         </div>
     </header>
-
+    <br><br>    
     <table class="records">
         <tr>
             <th>Date Published</th>
@@ -40,7 +37,7 @@
             <td><a href="narrative.html">Read More</a></td>
         </tr>
     </table>
-
+    <a href="new.html"><button>Add New<i class="fa fa-plus"></i></button></a>
 </body>
 
 </html>

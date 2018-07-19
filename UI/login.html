@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible">
     <title>Log In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body>
 
-    <form>
-        <fieldset>
-            <legend>
-                <strong>Personal Information:</strong>
-            </legend>
-            <input type="text" name="Username" placeholder="Enter your username" required="required">
-            <br><br><br>
-            <input type="password" name="Password" placeholder="Enter your password" required="required">
-            <br><br><br>
-            <input type="button" value="Log In">
-            <h6>Have no account?<a href="signup.html">Sign Up</a></h6>
-            <h6>Go back to <a href="index.html">Home Page</a></h6>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In</button>
 
-        </fieldset>
+<div id="id01" class="modal">
+    <form class="modal-content animate" action="entrieslist.html">
+    <div class="container">
+      <i class="fa fa-user icon"></i>  <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
+      <i class="fa fa-key icon"></i>  <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button> Log In <i class="fa fa-sign-in"></i></button><br>
+      <label><input type="checkbox" checked="checked" name="remember"> Remember me </label>
+    </div>
 
-    </form>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a>
+      <br>Have no account?<a href="signup.html">Sign Up</a>
+      </span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
-
 </html>

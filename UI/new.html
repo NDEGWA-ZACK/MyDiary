@@ -7,15 +7,15 @@
     <title>New Entry</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <div>
-            <ul>
+            <ul class="topnav">
+                <li><a href="login.html"><i class="fa fa-sign-out">LOG OUT</i></a></li>
                 <li><a class="current" href="new.html">New Entry</a></li>
-                <li><a href="login.html">Log Out</a></li>
                 <li><a href="narrative.html">Narrative</a></li>
                 <li><a href="entrieslist.html">Entries List</a></li>
 
@@ -34,7 +34,7 @@
             <h5>Enter your entry here:</h5>
             <textarea rows="4" cols="40" required="required"></textarea>
             <br><br>
-            <input type="button" value="Save">
+            <a href="entrieslist.html"><button>Save <i class="fa fa-folder"></i></button></a>
         </fieldset>
     </form>
 </body>
