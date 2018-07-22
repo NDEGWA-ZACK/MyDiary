@@ -14,29 +14,29 @@
     <header>
         <div>
             <ul class="topnav">
-                <li><a href="login.html"><i class="fa fa-sign-out">LOG OUT</i></a></li>
+                <li><a href="../index.html"><i class="fa fa-sign-out">LOG OUT</i></a></li>
                 <li><a class="current" href="new.html">New Entry</a></li>
                 <li><a href="narrative.html">Narrative</a></li>
                 <li><a href="entrieslist.html">Entries List</a></li>
-
+                <li><a href="myprofile.html">My Profile</a></li>
             </ul>
         </div>
     </header>
-    <form>
-        <fieldset>
-            <legend><strong>Make a new Entry</strong></legend>
-            <h5>Enter current date:</h5>
-            <input type="date" name="date" required="required">
-            <br><br>
-            <h5>Enter the title of your Entry:</h5>
-            <input type="text" name="text" required="required">
-            <br><br>
-            <h5>Enter your entry here:</h5>
-            <textarea rows="4" cols="40" required="required"></textarea>
-            <br><br>
-            <a href="entrieslist.html"><button>Save <i class="fa fa-folder"></i></button></a>
-        </fieldset>
-    </form>
+    <br><br>
+    <div class="form">
+        <form id="fom">
+            <fieldset>
+                <br><br>
+                <h5>Enter the title of your Entry:</h5>
+                <input type="text" name="text" required="required" placeholder="Title here">
+                <br><br>
+                <h5>Enter your entry here:</h5>
+                <textarea rows="4" cols="40" required="required" placeholder="Type your story here"></textarea>
+                <br><br>
+                <a href="entrieslist.html"><button>Save <i class="fa fa-folder"></i></button></a>
+            </fieldset>
+        </form>
+    </div>
 </body>
 
 </html>

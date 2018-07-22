@@ -4,24 +4,92 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible">
-    <title>MyDiary</title>
+    <title>My Diary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./UI/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <a href="./UI/login.html"><button class="cancelbtn">Log In</button></a>
-    <a href="./UI/signup.html"><button class="cancelbtn">Sign Up</button></a>
     <h1><strong><marquee> Welcome to My Diary</marquee></strong></h1>
-    <section class="container">        
+    <section class="container">
         <p>
             <img src="./UI/img/diary.png" alt="diary">
             <br> MyDiary is an online journal where users can pen down their thoughts and feelings.
-            <br> Not one of us yet? <a href="signup.html">Sign up</a> for an account and join us today.
+            <br> Not one of us yet? Sign up for an account and join us today.
         </p>
-        
-    </section>  
+    </section>
+
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log In</button>
+
+    <div id="id01" class="modal">
+        <form class="modal-content animate" action="./UI/entrieslist.html">
+            <div class="container">
+                <i class="fa fa-user icon"></i> <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <i class="fa fa-key icon"></i> <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button> Log In <i class="fa fa-sign-in"></i></button><br>
+                <label><input type="checkbox" checked="checked" name="remember"> Remember me </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a>
+            </span>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Get the log in modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id02" class="modal">
+        <form class="modal-content animate" action="index.html">
+            <div class="container">
+                <i class="fa fa-user icon"></i> <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <i class="fa fa-key icon"></i> <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <i class="fa fa-key icon"></i> <label for="psw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="psw" required>
+
+                <button> Sign Up <i class="fa fa-user-plus"></i></button>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Already have an account?<a href="index.html">Log In</a></span>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the sign up modal
+        var modal = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 

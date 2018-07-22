@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible">
+    <title>My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <ul class="topnav">
+                <li><a class="current" href="myprofile.html">My Profile</a></li>
+                <li><a href="new.html">New Entry</a></li>
+                <li><a href="entrieslist.html">Entries List</a></li>
+                <li><a href="narrative.html">Narrative</a></li>
+            </ul>
+        </div>
+    </header>
+    <br><br>
+
+    <div style="display:none" id="mySidebar">
+        <button onclick="close_btn()">Close &times;</button>
+        <a href="#"><i class="fa fa-cog fa-spin"></i>Change Password</a><br><br>
+        <a href="../index.html"><i class="fa fa-sign-out"></i>Log Out</a><br><br>
+        <a href="#"><i class="fa fa-trash">Delete Account</i></a><br><br>
+    </div>
+
+    <div id="main">
+        <div>
+            <button id="openNav" onclick="open_btn()">Profile&#9776;</button>
+            <div class="w3-container">
+                <h1>My Profile Page</h1>
+            </div>
+        </div>
+        <div>
+            <p> On this page, you are able to make changes to your account settings.
+                <br> There's still more coming very soon.
+            </p>
+        </div>
+
+        <div>
+            <h4>Do you wish to turn on notifications to remind you to post to your diary daily?</h4>
+            <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider"></span>
+            </label>
+        </div>
+
+    </div>
+
+    <script>
+        function open_btn() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+
+        function close_btn() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
+
+</body>
+
+</html>
